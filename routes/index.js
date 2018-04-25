@@ -214,7 +214,7 @@ router.post('/api/update/:id', function(req, res){
    var dataToUpdate = {}; // a blank object of data to update
 
     // pull out the information from the req.body and add it to the object to update
-    var date, length, synopsis, snore, awake, stress url;
+    var date, length, synopsis, snore, awake, stress, url;
 
     // we only want to update any field if it actually is contained within the req.body
     // otherwise, leave it alone.
