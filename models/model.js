@@ -10,14 +10,12 @@ var dreamSchema = new Schema({
 	length: String,
 	tags: [String],
 	synopsis: String,
-	description: {
-		snore: Number,
-		awake: Number
-	},
+	snore: Number,
+	awake: Number,
 	stress: Number,
 	url: String,
 	dateAdded : { type: Date, default: Date.now },
 })
 
-// export 'Animal' model so we can interact with it in other files
+// export 'Dream' model so we can interact with it in other files
 module.exports = mongoose.model('Dream',dreamSchema);

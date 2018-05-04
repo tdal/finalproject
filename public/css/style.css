@@ -2,18 +2,173 @@
 /* Custom CSS */
 /**************/
 
-img {
-    width: 100%;
+
+
+html,body{
+    margin:0;
+  	padding: 0;
+    height:100%;
+    background-color: #192440;
+    color:#F05440 ;
 }
+
+img{
+  display:block;
+  width:100%; height:100%;
+  object-fit: cover;
+  padding-bottom: 50px;
+  background-size: contain;
+}
+
+.headline{
+	font-family:"Dancing Script";
+	font-size: 70px;
+  padding-bottom:0px;
+  padding-top: 0px;
+  padding-left: 50px;
+	white-space: nowrap;
+  color: #F05440
+}
+
+#idea-text {
+  padding-bottom: 0px;
+  padding-left: 70px;
+  padding-top: 90px;
+  padding-right: 50px;
+	font-family: "Tajawal";
+  font-weight: lighter;
+	font-size: 24px;
+	color: white;
+}
+
+
+.stat {
+  font-family: "Tajawal";
+  padding-right: 100px;
+  padding-top: 100px;
+  padding-left: 50px;
+  vertical-align: bottom;
+
+}
+
+.numeric-stat {
+  padding: 0px;
+  margin: 0px;
+}
+
+#label {
+    color: #8B909E;
+    font-size: 20px;
+    padding: 0px;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+
+#snoreAvg {
+  font-size: 120px;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+}
+
+#row {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+#secondRow {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 52px
+}
+
+#idea {
+	display: flex;
+	flex-direction: row;
+
+}
+
+
+
+#data-text {
+	margin-top: 0px;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-family: "Tajawal";
+  font-weight: lighter;
+  font-size: 24px;
+  color: white;
+  text-align:center;
+}
+
+#data-head {
+	font-family:"Dancing Script";
+	font-size: 70px;
+	padding: 0px;
+	white-space: nowrap;
+    color: #F05440;
+    text-align: center;
+}
+
+.headline2 {
+	font-family:"Dancing Script";
+	font-size: 70px;
+	white-space: nowrap;
+  color: #F05440;
+  margin: 30px;
+
+}
+
+.explanation-subheading {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+#conclusion-text {
+	font-family: "Tajawal";
+  font-weight: lighter;
+	font-size: 24px;
+	color: white;
+  padding-left: 40px;
+  padding-right: 100px;
+
+}
+
+#data-holder {
+
+	justify-content: center;
+}
+
+
+canvas {
+   background-color: #192440;
+}
+
+
+#end {
+  display: flex;
+	flex-direction: row;
+}
+
 
 h1 {
     text-align: center;
     margin-bottom: 16px;
+    font-family: "Tajawal";
+    color: white;
 }
 
 .card {
-    background: #FFFFFF;
-    border: 1px solid #E9EAEE;
+    background: #192440;
+    border: 1px solid #8B909E;
     border-radius: 8px;
     max-width: 360px;
     min-width: 320px;
@@ -29,11 +184,13 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    font-family: "Tajawal";
 }
 
 .control-panel a {
     padding: 8px 16px;
     margin: 0 6px;
+    color: #8B909E;
 }
 
 .tagHolder {
@@ -53,5 +210,33 @@ h1 {
     text-transform: uppercase;
     padding: 8px 16px;
     margin: 0 6px;
+    font-family: "Tajawal";
 }
+
+.nextTo { 
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.smallHead {
+    color: #8B909E;
+    font-size: 20px;
+    padding: 0px;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+
+.boldNumber {
+  font-size: 60px;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.number { 
+	padding: 20px;
+	}
 

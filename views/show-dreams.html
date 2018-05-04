@@ -10,10 +10,11 @@
     <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- Custom CSS inside CSS folder -->
     <link rel="stylesheet" href="css/style.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -24,13 +25,192 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container" style="margin-top: 60px" id="pet-holder">
+  
+     <div class="container">
+
+    
+    <div>
+    <img src="http://gdurl.com/0iN1">
+    </div>
+
+	<div id="idea">
+	<h5 class="headline">The idea</h5>
+	<p id="idea-text"> I have always been a very active sleeper and an occasional sleepwalker. People have been telling me that snore and talk in my sleep all my life. That's why I want to track my sleep patterns and get to the bottom of this: Am I really a heavy snorer? What influences my behavior during sleep? And what do the things that I dream tell about me? </p>
+	</div>
+
+  <div id="data-head">
+  <h5>The data</h5>
+  </div>
+
+<p id="data-text"> For one week, I tracked my sleeping behavior with a FitBit wristband and an App called SnoreLab which records snoring and analyzes the sound files. </p>
+
+<div id="data-holder">
+  <div id="row">
+  <div>
+    <canvas id="myChart" width="400px" height="400px"></canvas>
+  </div>
+
+  <script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+
+      Chart.defaults.global.defaultFontColor = 'white';
+      Chart.defaults.global.defaultFontSize = 15;
+
+    let sleepChart = new Chart(myChart, {
+      type:'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:["asleep", "awake/restless"],
+        datasets:[{
+          label: "Time spent",
+          data: [
+            93.7,
+            6.3,
+            0
+          ],
+          backgroundColor: [
+            "#F05440",
+            "#F7A99F"
+          ],
+        }]
+      },
+      options:{
+        title: {
+          display: true,
+          text: "Percentage of night spent asleep / restless",
+          },
+        layout: {
+          padding: 50,
+        },
+      }
+    });
+  </script>
+
+
+  <div>
+    <canvas id="chartTwo" width="400px" height="400px"></canvas>
+  </div>
+  <script>
+    let chartTwo = document.getElementById('chartTwo').getContext('2d');
+
+    let dreamChart = new Chart(chartTwo, {
+      type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:["Apr 22", "Apr 23", "Apr 24", "Apr 25", "Apr 26"],
+        datasets:[{
+          label: "Hours slept",
+          data: [
+            6.8,
+            7.1,
+            6.9,
+            5.5,
+            7.1,
+            0,
+            8
+          ],
+          backgroundColor: [
+            "#F05440",
+            "#F05440",
+            "#F05440",
+            "#F05440",
+            "#F05440"
+          ],
+
+        }]
+      },
+      options:{
+          title: {
+          display: true,
+          text: "Time slept"
+        },
+          layout: {
+            padding: 50,
+          },
+      }
+    });
+
+
+  </script>
+
+</div>
+
+<div id="secondRow">
+  <div class="stat" width="400px" height="400px">
+    <h5 id="label">Snore score</h5>
+    <div class="numeric-stat">
+      <span id="snoreAvg">7.8</span> / 20
+      <div class="explanation-subheading">Average snoring volume</div>
+      <div class="explanation-subheading">as measured by SnoreLab</div>
+    </div>
+  </div>
+
+  <div>
+    <canvas id="chartThree" width="400px" height="400px"></canvas>
+  </div>
+  <script>
+    let chartThree = document.getElementById('chartThree').getContext('2d');
+
+    let snoreChart = new Chart(chartThree, {
+      type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:["Apr 22", "Apr 23", "Apr 24", "Apr 25", "Apr 26"],
+        datasets:[{
+          label: "Percentage spent snoring",
+          data: [
+          15, 17, 15, 22, 17, 100
+          ],
+          backgroundColor: [
+            "#F05440"
+          ],
+
+        }]
+      },
+      options:{
+          title: {
+          display: true,
+          text: "Snoring percentage"
+        },
+          layout: {
+            padding: 50,
+          },
+      }
+    });
+
+
+  </script>
+
+
+</div>
+
+<div>
+	<h5 class="headline2">A closer look</h5>
+</div>	
+  
+    <div class="control-panel" style="margin-top: 60px" id="dream-holder">
     </div>
 
   </body>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   </body>
+
+<div>
+	<h5 class="headline2">The conclusion</h5>
+</div>
+<div id="end">
+	<p id="conclusion-text"> Looking at the data, I have got to say: My sleeping problem is
+	 not as bad as I thought. The times at night that I spend restless or awake are absolutely
+	 average. And yes, I am definitely a snorer, but my snoring is not as horrible as some people made it seem (trust me, I have listened to the recordings). Now, I want to take a deeper
+look at the data and find out if there are any changing patterns in my sleeping behavior and if there are
+any external factors influencing it. Also, I want to analyze my dreams and find ways to visualize what is happening
+in them.</p>
+  <img src="http://gdurl.com/23bj" height="200" width="200">
+	</div>
+
+
+
+      </div>
+
+    </div>
 
   <script src="js/main.js" type="text/javascript"></script>
 
